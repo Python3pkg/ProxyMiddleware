@@ -89,7 +89,7 @@ class AddHeaderPlugin(object):
 
     def apply(self, callback, route):
         def wrapper(*args, **kwargs):
-            for header, value in self.headers.items():
+            for header, value in list(self.headers.items()):
                 response.set_header(header, value)
             return callback(*args, **kwargs)
         return wrapper

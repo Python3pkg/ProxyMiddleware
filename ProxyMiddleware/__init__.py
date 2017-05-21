@@ -1,1 +1,1 @@
-from ProxyMiddleware import ReverseProxied, TrailingSlash, force_slash
+from .ProxyMiddleware import ReverseProxied, TrailingSlash, force_slash
